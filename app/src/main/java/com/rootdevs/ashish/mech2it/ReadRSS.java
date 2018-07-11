@@ -37,7 +37,7 @@ public class ReadRSS extends AsyncTask<Void, Void, Void> {
         progressDialog.setMessage("Loading...");
     }
 
-    //before fetching of rss statrs show progress to user
+    
     @Override
     protected void onPreExecute() {
         progressDialog.show();
@@ -45,10 +45,10 @@ public class ReadRSS extends AsyncTask<Void, Void, Void> {
     }
 
 
-    //This method will execute in background so in this method download rss feeds
+   
     @Override
     protected Void doInBackground(Void... params) {
-        //call process xml method to process document we downloaded from getData() method
+        
         ProcessXml(Getdata());
 
         return null;
@@ -65,7 +65,7 @@ public class ReadRSS extends AsyncTask<Void, Void, Void> {
 
     }
 
-    // In this method we will process Rss feed  document we downloaded to parse useful information from it
+
     private void ProcessXml(Document data) {
         if (data != null) {
             feedItems = new ArrayList<>();
@@ -101,7 +101,7 @@ public class ReadRSS extends AsyncTask<Void, Void, Void> {
         }
     }
 
-    //This method will download rss feed document from specified url
+    
     public Document Getdata() {
         try {
             url = new URL(address);
