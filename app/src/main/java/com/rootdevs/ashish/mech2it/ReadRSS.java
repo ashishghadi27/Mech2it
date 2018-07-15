@@ -2,6 +2,7 @@ package com.rootdevs.ashish.mech2it;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,13 +25,16 @@ import Model.Feed;
 
 public class ReadRSS extends AsyncTask<Void, Void, Void> {
     Context context;
-    String address = "http://www.sciencemag.org/rss/news_current.xml";
+    String address;
     ProgressDialog progressDialog;
     ArrayList<Feed> feedItems;
     RecyclerView recyclerView;
     URL url;
+    public int count = 0;
 
     public ReadRSS(Context context, RecyclerView recyclerView) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("rss",Context.MODE_PRIVATE);
+        address = sharedPreferences.getString("link","http://www.sciencemag.org/rss/news_current.xml");
         this.recyclerView = recyclerView;
         this.context = context;
         progressDialog = new ProgressDialog(context);
@@ -60,7 +64,9 @@ public class ReadRSS extends AsyncTask<Void, Void, Void> {
         progressDialog.dismiss();
         FeedAdapter adapter = new FeedAdapter(context, feedItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        //recyclerView.addItemDecoration(new VerticalSpace(20));
+        if(count == 0){
+            recyclerView.addItemDecoration(new VerticalSpace(10));
+        }
         recyclerView.setAdapter(adapter);
 
     }

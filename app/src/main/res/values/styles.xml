@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppThemenew" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#37474f</item>
+        <item name="colorPrimaryDark">#263238</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

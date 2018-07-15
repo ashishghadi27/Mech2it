@@ -1,396 +1,553 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#ffffff">
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#000"
+            app:cardElevation="20dp"
+            tools:targetApi="lollipop"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="principal">
 
-            <android.support.v7.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#f50057"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical|bottom">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="@string/principal"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/mech"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/mechexplore"
-                        android:onClick="loadrssact"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#fff"/>
 
 
-                </LinearLayout>
+            </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#fff"
+            app:cardElevation="20dp"
+            tools:targetApi="lollipop"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="office">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#ffab00"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical|bottom">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="@string/office"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/it"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/itexplore"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#000000"/>
 
 
-                </LinearLayout>
+            </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#37474f"
+            app:cardElevation="20dp"
+            tools:targetApi="lollipop"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:onClick="firstyear">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#1de9b6"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal|center_vertical|bottom">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="@string/fy"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/electronics"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/extcexplore"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#fff"/>
 
 
-                </LinearLayout>
+            </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+
+
+            <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#ff5252"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                android:columnCount="2"
+                android:rowCount="4">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#f50057"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/comps"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/compsexplore"/>
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/mech"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/mechexplore"
+                            android:onClick="loadmech"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#0d47a1"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#ffab00"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/civil"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/civilexplore"/>
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/it"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/itexplore"
+                            android:onClick="loadit"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#ffd600"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                <android.support.v7.widget.CardView
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#1de9b6"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/automobile"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/autoexplore"/>
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/electronics"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/extcexplore"
+                            android:onClick="loadextc"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#f57c00"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                <android.support.v7.widget.CardView
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#ff5252"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/Mba"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/mbaexplore"/>
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/comps"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/compsexplore"
+                            android:onClick="loadcomps"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#00bfa5"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="10dp"
-                tools:targetApi="lollipop">
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#0d47a1"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/montserrat_alternates"
-                        android:gravity="center"
-                        android:text="@string/me"
-                        android:textColor="#000000"
-                        android:textSize="25sp" />
-
-                    <Button
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/roundbutton"
-                        android:text="@string/explore"
-                        android:textColor="#ffffff"
-                        android:textAllCaps="false"
-                        android:fontFamily="@font/montserrat"
-                        android:textSize="18sp"
-                        android:id="@+id/meexplore"/>
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/civil"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/civilexplore"
+                            android:onClick="loadcivil"/>
 
 
-                </LinearLayout>
+                    </LinearLayout>
 
 
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#ffd600"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/automobile"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/autoexplore"
+                            android:onClick="loadauto"/>
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#f57c00"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/Mba"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/mbaexplore"
+                            android:onClick="loadmba"/>
+
+
+                    </LinearLayout>
+
+
+
+                </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#00bfa5"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="10dp"
+                    tools:targetApi="lollipop"
+                   android:layout_rowWeight="1"
+                   android:layout_columnWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal|center_vertical|bottom">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_alternates"
+                            android:gravity="center"
+                            android:text="@string/me"
+                            android:textColor="#000000"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundbutton"
+                            android:text="@string/explore"
+                            android:textColor="#ffffff"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:id="@+id/meexplore"
+                            android:onClick="loadme"/>
+
+
+                    </LinearLayout>
+
+               </android.support.v7.widget.CardView>
+
+
+            </GridLayout>
+
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
-        </LinearLayout>
+                android:layout_height="10dp" />
 
-    </ScrollView>
 
-</LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

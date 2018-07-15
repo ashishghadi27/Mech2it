@@ -30,6 +30,7 @@ public class Feeds extends AppCompatActivity {
                 if(isNetworkAvailable()) {
                     ReadRSS readRss = new ReadRSS(Feeds.this, mRecyclerView);
                     readRss.execute();
+                    readRss.count = 1;
                     mSwipeRefresh.setRefreshing(false);
                 }
                 else
