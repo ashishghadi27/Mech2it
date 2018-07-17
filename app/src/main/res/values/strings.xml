@@ -13,4 +13,9 @@
     <string name="office">Office</string>
     <string name="principal">Principal</string>
     <string name="fy">First Year</string>
+    <string name="login">Login</string>
+    <string name="username_or_e_mail">Username or E-mail</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password</string>
 </resources>

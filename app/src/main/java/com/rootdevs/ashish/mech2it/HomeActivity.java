@@ -4,11 +4,11 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import Model.Feed;
+import com.onesignal.OneSignal;
 
 public class HomeActivity extends AppCompatActivity {
     String link = "";
@@ -17,6 +17,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
+        setContentView(R.layout.activity_home);
+        OneSignal.setEmail("intern2k18@mech2it.com");
     }
 
     public void loadmech(View view){
