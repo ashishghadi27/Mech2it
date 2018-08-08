@@ -13,8 +13,14 @@ public class Signin extends AppCompatActivity {
         setContentView(R.layout.activity_signin);
     }
 
-    public void tohome(View view){
+    public void loadnotice(View view){
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
+
+    public void loaderp(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
