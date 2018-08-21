@@ -3,6 +3,7 @@ package com.rootdevs.ashish.mech2it;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progress;
     static String weblink;
     private SwipeRefreshLayout swipeRefreshLayout;
-
+    private String link = "";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -41,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         web = findViewById(R.id.webview);
         swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swipe);
-        weblink = "https://demo.m2i.cloud/app/";
+        SharedPreferences sharedPreferences = getSharedPreferences("unique", MODE_PRIVATE);
+        link = sharedPreferences.getString("code", "");
+        weblink = "https://"+link+".m2i.cloud/app/";
         web.getSettings().setJavaScriptEnabled(true);
         web.getSettings().setSupportZoom(true);       //Zoom Control on web
         web.getSettings().setBuiltInZoomControls(true); //Enable Multitouch if supported by ROM

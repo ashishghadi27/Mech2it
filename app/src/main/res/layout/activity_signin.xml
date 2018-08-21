@@ -18,7 +18,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="225dp"
                 android:text="ERP System"
                 android:fontFamily="@font/montserrat"
                 android:background="@drawable/roundbutton"
@@ -35,7 +35,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="225dp"
                 android:text="Notice Board"
                 android:fontFamily="@font/montserrat"
                 android:background="@drawable/roundbutton"
